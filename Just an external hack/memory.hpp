@@ -4,6 +4,8 @@
 #include <TlHelp32.h>
 #include <iomanip>
 
+//This memory class is straight outta https://www.youtube.com/watch?v=jutZzuvX8Qs 
+
 class Memory
 {
 public:
@@ -29,7 +31,6 @@ public:
 
 	uintptr_t getProcess(const wchar_t*);
 	uintptr_t getModule(uintptr_t, const wchar_t*);
-	uintptr_t getAddress(uintptr_t, std::vector<uintptr_t>);
 
 private:
 

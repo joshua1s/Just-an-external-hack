@@ -51,13 +51,3 @@ uintptr_t Memory::getModule(uintptr_t procId, const wchar_t* modName)
     } while (Module32Next(hModule, &mEntry));
     return 0;
 }
-
-uintptr_t Memory::getAddress(uintptr_t addr, std::vector<uintptr_t> vect)
-{
-    for (int i = 0; i < vect.size(); i++)
-    {
-        ReadProcessMemory(handle, (BYTE*)addr, &addr, sizeof(addr), 0);
-        addr += vect[i];
-    }
-    return addr;
-}

@@ -33,8 +33,6 @@ void render()
 
 	if (!foundCS)
 	{
-		if (ImGui::Button("Open google"))
-			ShellExecute(0, 0, L"https://apollohooks.wixsite.com/apollo", 0, 0, SW_SHOW);
 		ImGui::Text("Please open CS:GO");
 		ImGui::End();
 		return;
